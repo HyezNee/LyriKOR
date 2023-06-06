@@ -42,7 +42,7 @@ Example of inference
 	로 코드를 내려받은 후 `kobart` 디렉토리를 다음의 경로에 위치시켜 주세요.   
 	Use the command above (git clone~ ) and put the `kobart` directory to the following path.
 	```
-	LyriKor
+	LyriKOR
 	└─ ...
 	└─ Syllabic_adjustment
 		└─ kobart
@@ -71,7 +71,7 @@ Example of inference
 	```
 3. If there were no abnormalities, the train dataset file would have been created in the `dataset` directory. If you created a file in a different location, please move the file to the following location.   
 	```
-	LyriKor
+	LyriKOR
 	└─ dataset
 		└─ train_dataset_file_name.csv
 	└─ ...
