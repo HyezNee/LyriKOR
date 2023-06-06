@@ -1,7 +1,7 @@
 # LyriKOR
 ### LyriKOR: English to Korean Song Translation with Syllabic Alignment   
    
-🔤2023-1 Natural language processing(COSE361) Term project in Korea Univ.   
+🔤2023-1 Natural language processing (COSE461) Term project in Korea Univ.   
 ✅**Achive Outstanding Projects (in Top-9 of 50 teams)**      
    
    
