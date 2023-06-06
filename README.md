@@ -7,7 +7,7 @@
    
 ※ 저자들의 시험 기간 이슈로 일단은 미완성 레포입니다.   
 > TODO:
-> - evaluation.py commit
+> - commit evaluation.py
 > - debugging
 > - inference code for csv file
    
@@ -88,10 +88,10 @@ Example of inference
 7. If you want to tune the hyperparameter, use those options.
 	```
 	python train.py ...
-					--batch_size (default=512)
-					--epochs (default=15)
-					--warmup_ratio (default=3e-5)
-					--learning_rate (default=1.0)
+			--batch_size (default=512)
+			--epochs (default=15)
+			--warmup_ratio (default=3e-5)
+			--learning_rate (default=1.0)
 	```
 
 
