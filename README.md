@@ -33,7 +33,7 @@ Example of inference
    
    
 ## Environment Setup
-1. Install [KoBART](https://github.com/SKT-AI/KoBART)
+1. Install [KoBART](https://github.com/SKT-AI/KoBART)   
 	Colab에서 위 링크에 소개된 설치 방법(pip install ~)대로 KoBART를 설치할 경우 버전 충돌 때문에 제대로 설치되지 않는 문제 발생.    
 	그러므로 pip을 이용해서 설치하는 대신,
 	```
@@ -57,25 +57,25 @@ Example of inference
    
    
 ## How to Train the Syllabic Adjustment model
-1. Prepare the Lyrics csv file of Korean songs.
+1. Prepare the Lyrics csv file of Korean songs.   
 	**It must have a column named `lyrics`.** For example:
 	   
 	| lyrics |
 	| :--: |
 	| 이 밤 그날의 반딧불을 당신의 ... |
 
-2. Make train dataset file. Use the command below.
+2. Make train dataset file. Use the command below.   
 	```
 	python preprocessing_for_train_data.py --lyrics_dataset_path='lyrics_file_name.csv' --save_dataset_path='train_dataset_file_name.csv'
 	```
-3. If there were no abnormalities, the train dataset file would have been created in the `dataset` directory. If you created a file in a different location, please move the file to the following location.
+3. If there were no abnormalities, the train dataset file would have been created in the `dataset` directory. If you created a file in a different location, please move the file to the following location.   
 	```
 	LyriKor
 	└─ dataset
 		└─ train_dataset_file_name.csv
 	└─ ...
 	```
-4. Use the command to train the model.
+4. Use the command to train the model.   
 	```
 	cd Syllabic_adjustment
 	python train.py --train_csv_file='train_dataset_file_name.csv'
