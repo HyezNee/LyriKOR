@@ -66,7 +66,8 @@ Example of inference
 
 2. Make train dataset file. Use the command below.   
 	```
-	python preprocessing_for_train_data.py --lyrics_dataset_path='lyrics_file_name.csv' --save_dataset_path='train_dataset_file_name.csv'
+	python preprocessing_for_train_data.py --lyrics_dataset_path=lyrics_file_name.csv
+					       --save_dataset_path=train_dataset_file_name.csv
 	```
 3. If there were no abnormalities, the train dataset file would have been created in the `dataset` directory. If you created a file in a different location, please move the file to the following location.   
 	```
@@ -78,11 +79,11 @@ Example of inference
 4. Use the command to train the model.   
 	```
 	cd Syllabic_adjustment
-	python train.py --train_csv_file='train_dataset_file_name.csv'
+	python train.py --train_csv_file=train_dataset_file_name.csv
 	```
 5. If you want to load the checkpoint of our model and continue to train, use `--checkpoint_path` option.
 	```
-	python train.py --checkpoint_path='path/to/load/model'
+	python train.py --checkpoint_path=path/to/load/model
 	```
 7. If you want to tune the hyperparameter, use those options.
 	```
@@ -97,8 +98,8 @@ Example of inference
 ## How to Inference
 1. By a single text line
 	```
-	python --input='input_text'
-		   --checkpoint_path='path/to/load/model'
+	python --input=input_text
+	       --checkpoint_path=path/to/load/model
 	```
 2. By a csv file (multiple lines)      
 	**! TODO !**    
