@@ -80,7 +80,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='inference')
     # parser.add_argument('--lyrics_csv_file', type=str)
     parser.add_argument('--input', type=str)
-    parser.add_argument('--save_dataset_path', type=str)
+    # parser.add_argument('--save_dataset_path', type=str)
     parser.add_argument('--checkpoint_path', type=str)
     args = parser.parse_args()
 
