@@ -1,27 +1,27 @@
 # LyriKOR
 ### LyriKOR: English to Korean Song Translation with Syllabic Alignment   
-
+   
 🔤2023-1 Natural language processing(COSE361) Term project in Korea Univ.   
 ✅**Achive Outstanding Projects (in Top-9 of 50 teams)**
-
+   
 ※ 저자들의 시험 기간 이슈로 일단은 미완성 레포입니다.   
 > TODO:
 > - evaluation.py commit
 > - debugging
 > - inference code for csv file
-
-
+   
+   
 ## Approach
 ![overview](imgs/overview.png)   
-Model structure overview diagram   
+Model structure overview diagram     
    
 ![syllabic_adjustment](imgs/syllabic_adjustment.png)   
-Model structure & How to train syllabic adjustment model   
+Model structure & How to train syllabic adjustment model     
    
 ![syllabic_adjustment](imgs/inference_example.png)   
-Example of inference
-
-
+Example of inference   
+   
+   
 ## Results
 |원문|번역|
 |--|--|
@@ -29,8 +29,8 @@ Example of inference
 |The day you kissed my lips|입맞춤 해주던|
 |A hopeless romantic all my life|내 평생의 희망 없는 낭만|
 |Surrounded by couples all the time|늘 커플에 둘러싸여 늘|
-
-
+   
+   
 ## Environment Setup
 1. Install [KoBART](https://github.com/SKT-AI/KoBART)
 	Colab에서 위 링크에 소개된 설치 방법(pip install ~)대로 KoBART를 설치할 경우 버전 충돌 때문에 제대로 설치되지 않는 문제 발생.    
@@ -47,14 +47,14 @@ Example of inference
 		└─ kobart
 	└─ ...
 	```
-2. Install the other required modules
-	**! TODO: make requeirements.txt file !**
-	(colab에 깔려있는 module + transformer + boto3)
+2. Install the other required modules   
+	**! TODO: make requeirements.txt file !**   
+	(colab에 깔려있는 module + transformer + boto3)   
 	```
 	pip install -r requirements.txt
 	```
-
-
+   
+   
 ## How to Train the Syllabic Adjustment model
 1. Prepare the Lyrics csv file of Korean songs.
 	**It must have a column named `lyrics`.** For example:
@@ -101,7 +101,8 @@ Example of inference
 	```
 2. By a csv file (multiple lines)
 	**! TODO !**
-
+   
+    
 ## Reference
-[KoBART](https://github.com/SKT-AI/KoBART)
-[KoBART Question Generation](https://github.com/Seoneun/KoBART-Question-Generation)
+[KoBART](https://github.com/SKT-AI/KoBART)   
+[KoBART Question Generation](https://github.com/Seoneun/KoBART-Question-Generation)   
