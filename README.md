@@ -98,7 +98,7 @@ Example of inference
 ## How to Inference
 1. By a single text line
 	```
-	python --input=input_text
+	python inference.py --input=input_text
 	       --checkpoint_path=path/to/load/model
 	```
 2. By a csv file (multiple lines)      
