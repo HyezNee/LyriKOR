@@ -10,7 +10,7 @@
 ※ 저자들의 시험 기간 이슈로 일단은 미완성 레포입니다.   
 > TODO:
 > - commit evaluation.py
-> - debugging
+> - debugging (일부 완료)
 > - inference code for csv file
    
    
@@ -45,9 +45,7 @@ Example of inference
 	Use the command above (git clone~ ) and put the `kobart` directory to the following path.
 	```
 	LyriKOR
-	└─ ...
-	└─ Syllabic_adjustment
-		└─ kobart
+	└─ kobart
 	└─ ...
 	```
 2. Install the other required modules   
