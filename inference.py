@@ -10,7 +10,7 @@ from nltk.corpus import cmudict
 import argparse
 
 from Syllabic_adjustment.Syllabic_adjustment_model import CustomKoBART
-from Syllabic_adjustment.kobart import get_kobart_tokenizer
+from kobart import get_kobart_tokenizer
 
 
 def is_korean_word(word):
@@ -70,7 +70,7 @@ def process_files(inputs, eng_kor):
     else:
         len_token = custom_vocab_map['[LEN60]']
 
-    translated = eng_kor(inputs)[0]['translation_text']
+    translated = eng_kor(inputs, max_length=50)[0]['translation_text']
 
     return f"<s>{len_token}{translated}</s>"
 
@@ -89,15 +89,17 @@ if __name__ == "__main__":
     checkpoint2 = "circulus/kobart-trans-en-ko-v2"
     tokenizer2 = PreTrainedTokenizerFast.from_pretrained(checkpoint2)
     model2 = AutoModelForSeq2SeqLM.from_pretrained(checkpoint2)
+    eng_kor = pipeline("translation", tokenizer=tokenizer2, model=model2, device=0)
 
     # TODO: csv file 단위로 한번에 inference 처리 => .ipynb 파일을 py 파일로 옮기기
     # filename = 'eng_lyrics_syllables.csv'   # column name: 'lyrics'
     # df = pd.read_csv(os.path.join('dataset', args.lyrics_csv_file))
 
     kobart_tokenizer = get_kobart_tokenizer()
-    model_input = process_files(args.input)
+    model_input = process_files(args.input, eng_kor)
     model = CustomKoBART()
-    model.load_state_dict(torch.load(args.checkpoint_path))
+    model.load_state_dict(torch.load(args.checkpoint_path, map_location=torch.device(device)))
+    model.to(device)
 
     model_input = kobart_tokenizer([model_input], padding="max_length", max_length=30, truncation=True, return_tensors='pt')
     res_ids = model.generate(model_input["input_ids"].to(device), num_beams=4, min_length=0, max_length=50)

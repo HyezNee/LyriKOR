@@ -34,8 +34,8 @@ def translate_lyrics(df, kor_eng, eng_kor):
                     # 일단 쌓인 한국어 (to_translate)를 번역
                     # print(to_translate)
                     if to_translate != "":
-                        ke = kor_eng(to_translate.rstrip())[0]['translation_text']
-                        ek = eng_kor(ke)[0]['translation_text']
+                        ke = kor_eng(to_translate.rstrip(), max_length=50)[0]['translation_text']
+                        ek = eng_kor(ke, max_length=50)[0]['translation_text']
                         # to_translate 초기화, 영어는 그대로 붙이기
                         to_translate = ""
                         translated += ek + " " + word + " "
@@ -50,8 +50,8 @@ def translate_lyrics(df, kor_eng, eng_kor):
                     break   # 무시 단어 + 한/영 조합의 line일 경우 한/영 부분만 번역되는 불상사를 방지하기 위해 break
             # to_translate에 남아 있는 한국어 마저 번역
             if to_translate != "":
-                ke = kor_eng(to_translate.rstrip())[0]['translation_text']
-                ek = eng_kor(ke)[0]['translation_text']
+                ke = kor_eng(to_translate.rstrip(), max_length=50)[0]['translation_text']
+                ek = eng_kor(ke, max_length=50)[0]['translation_text']
                 translated += ek
             # 최종 결과에 추가
             if translated != "":

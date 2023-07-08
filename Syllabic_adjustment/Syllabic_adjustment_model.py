@@ -15,9 +15,6 @@ import numpy as np
 
 import logging
 
-from kobart import get_pytorch_kobart_model
-
-
 class CustomKoBART(nn.Module):
     def __init__(self):
         super(CustomKoBART, self).__init__()

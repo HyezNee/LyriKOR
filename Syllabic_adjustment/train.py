@@ -9,7 +9,7 @@ import torch.nn.functional as F
 from torch.utils.data import dataset
 
 import torch
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import DataLoader
 
 from tqdm import tqdm
 
