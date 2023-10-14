@@ -3,7 +3,7 @@
    
 🔤2023-1 Natural language processing (COSE461) Term project in Korea Univ.   
 ✅**Achieve Outstanding Projects (in Top-10 of 50 teams)**      
-✅**위 논문의 한국어 버전이 HCLT2023 (한글 및 한국어 정보처리 학술대회)에 accepted되었습니다.**   
+✅**위 논문의 한국어 버전이 HCLT2023 (한글 및 한국어 정보처리 학술대회)에 accepted됨**   
 [[report]](https://github.com/HyezNee/LyriKOR/blob/main/report/COSE461_Project_Final_Report__LyriKOR__Team_2.pdf)     
    
 
